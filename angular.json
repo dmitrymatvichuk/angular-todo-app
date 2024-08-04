@@ -32,7 +32,8 @@
             "styles": [
               "src/styles.scss"
             ],
-            "scripts": []
+            "scripts": [],
+            "baseHref": "/angular-todo-app/"
           },
           "configurations": {
             "production": {
@@ -48,7 +49,8 @@
                   "maximumError": "4kb"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "/angular-todo-app/"
             },
             "development": {
               "buildOptimizer": false,
@@ -99,7 +101,10 @@
           }
         },
         "deploy": {
-          "builder": "angular-cli-ghpages:deploy"
+          "builder": "angular-cli-ghpages:deploy",
+          "options": {
+            "dir": "dist/angular-todo-app"
+          }
         }
       }
     }
